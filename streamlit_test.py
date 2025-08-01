@@ -4,7 +4,6 @@ import numpy as np
 import cv2
 from PIL import Image
 import time
-<<<<<<< HEAD
 from ultralytics import YOLO
 
 # --------- Load YOLOv8 Model ---------
@@ -29,27 +28,6 @@ st.caption("Powered by Falcon synthetic dataset + YOLOv8")
 col1, col2 = st.columns(2)
 
 # --------- Show Uploaded Images ---------
-=======
-import random
-
-st.set_page_config(page_title="🚀 Multi-Cam Detection Dashboard", layout="wide")
-
-# ----- Sidebar -----
-st.sidebar.title("🎛️ Control Panel")
-st.sidebar.markdown("Configure camera inputs and detection threshold.")
-
-confidence_threshold = st.sidebar.slider("Detection Confidence Threshold", 0.0, 1.0, 0.5, 0.05)
-upload_cam1 = st.sidebar.file_uploader("Upload Image from Camera 1", type=["png", "jpg", "jpeg"], key="cam1")
-upload_cam2 = st.sidebar.file_uploader("Upload Image from Camera 2", type=["png", "jpg", "jpeg"], key="cam2")
-
-# ----- Header -----
-st.title("🛰️ Multi-Camera Object Detection App")
-st.caption("Powered by Falcon synthetic dataset + YOLOv8 ensemble logic")
-
-# ----- Image Display -----
-col1, col2 = st.columns(2)
-
->>>>>>> c8e1eb86b5ebdd5c5687d369c44ff181e4786cfe
 with col1:
     st.subheader("📷 Camera 1 View")
     if upload_cam1:
@@ -66,7 +44,6 @@ with col2:
     else:
         st.info("Upload an image for Camera 2.")
 
-<<<<<<< HEAD
 # --------- Perform Real Detection ---------
 if upload_cam1 and upload_cam2:
     st.markdown("---")
@@ -117,29 +94,6 @@ if upload_cam1 and upload_cam2:
     fused_results = []
     labels_cam1 = {d['label'] for d in detections_cam1}
     labels_cam2 = {d['label'] for d in detections_cam2}
-=======
-# ----- Simulate Detection and Merge Logic -----
-if upload_cam1 and upload_cam2:
-    st.markdown("---")
-    st.header("🧠 Detection Fusion & Analysis")
-    
-    with st.spinner("Running YOLOv8 object detection on both views..."):
-        time.sleep(2)  # Simulate processing delay
-
-    # Simulated mock results (in real app, replace with actual YOLO inference)
-    detections_cam1 = [{"label": "Toolbox", "confidence": 0.92, "bbox": [50, 80, 200, 250]}]
-    detections_cam2 = [{"label": "Toolbox", "confidence": 0.88, "bbox": [48, 85, 198, 255]},
-                       {"label": "Fire Extinguisher", "confidence": 0.78, "bbox": [250, 100, 350, 300]}]
-
-    st.subheader("🔍 Raw Detections")
-    st.json({"Camera 1": detections_cam1, "Camera 2": detections_cam2})
-
-    # Apply simple voting mechanism
-    st.subheader("🗳️ Fusion Outcome")
-    fused_results = []
-    labels_cam1 = {d['label'] for d in detections_cam1 if d['confidence'] >= confidence_threshold}
-    labels_cam2 = {d['label'] for d in detections_cam2 if d['confidence'] >= confidence_threshold}
->>>>>>> c8e1eb86b5ebdd5c5687d369c44ff181e4786cfe
     final_labels = labels_cam1.union(labels_cam2)
 
     for label in final_labels:
@@ -152,11 +106,7 @@ if upload_cam1 and upload_cam2:
     st.success("✅ Objects detected with multi-camera fusion:")
     st.json(fused_results)
 
-<<<<<<< HEAD
     # --------- Benefits Section ---------
-=======
-    # Benefits Panel
->>>>>>> c8e1eb86b5ebdd5c5687d369c44ff181e4786cfe
     st.markdown("""
     ### 🚀 Why Multi-Camera?
     - Detect occluded objects more reliably
