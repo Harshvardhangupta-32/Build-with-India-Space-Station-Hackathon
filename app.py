@@ -36,7 +36,7 @@ def display_stats(results):
             label = model.names[int(c)]
             counts[label] = counts.get(label, 0) + 1
         st.write("🔍 Class Counts:")
-        st.json(counts)
+        st.table(counts)
 
 # ----- Utility: Detection -----
 def run_image_detection(image):
