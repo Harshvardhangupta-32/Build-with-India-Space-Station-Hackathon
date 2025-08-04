@@ -46,7 +46,7 @@ if __name__ == '__main__':
     os.chdir(this_dir)
 
     # Load model
-    model = YOLO(os.path.join(this_dir, "yolov8s.pt"))
+    model = YOLO(os.path.join(this_dir, "yolov8n.pt"))
 
     # Train
     results = model.train(
