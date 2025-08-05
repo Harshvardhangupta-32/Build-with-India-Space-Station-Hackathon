@@ -10,7 +10,7 @@ from ultralytics import YOLO
 # Load YOLOv8 model
 @st.cache_resource
 def load_model():
-    return YOLO("runs/detect/train2/weights/best.pt")  # Update path if needed
+    return YOLO("trained_model_outputs/multi_object_improved/weights/best.pt")  # Update path if needed
 
 model = load_model()
 
