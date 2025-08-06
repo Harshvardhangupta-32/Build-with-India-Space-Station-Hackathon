@@ -9,9 +9,9 @@ from ultralytics import YOLO
 @st.cache_resource
 def load_models():
     return {
-        "Nano": YOLO("runs/detect/Nano/weights/best.pt"),
-        "Small": YOLO("runs/detect/train2/weights/best.pt"),
-        "Medium": YOLO("runs/detect/train4/weights/best.pt")
+        "Nano (Eco Mode)": YOLO("models/Nano/weights/best.pt"),
+        "Small": YOLO("models/Small/weights/best.pt"),
+        "Medium": YOLO("models/Medium/weights/best.pt")
     }
 
 model_map = load_models()

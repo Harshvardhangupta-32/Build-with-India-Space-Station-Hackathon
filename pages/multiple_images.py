@@ -12,9 +12,9 @@ import uuid
 @st.cache_resource
 def load_models():
     model_map = {
-        "Nano": YOLO("runs/detect/Nano/weights/best.pt"),
-        "Medium": YOLO("runs/detect/train2/weights/best.pt"),
-        "Large": YOLO("runs/detect/train4/weights/best.pt")
+        "Nano (Eco Mode)": YOLO("models/Nano/weights/best.pt"),
+        "Small": YOLO("models/Small/weights/best.pt"),
+        "Medium": YOLO("models/Medium/weights/best.pt")
     }
     return model_map
 
@@ -59,9 +59,9 @@ if uploaded_files:
         # Show original + result
         col1, col2 = st.columns(2)
         with col1:
-            st.image(image, caption=f"Original - {uploaded_file.name}", use_column_width=True)
+            st.image(image, caption=f"Original - {uploaded_file.name}", use_container_width=True)
         with col2:
-            st.image(output_path, caption="Detection Result", use_column_width=True)
+            st.image(output_path, caption="Detection Result", use_container_width=True)
 
         # Clean up temp file
         os.remove(temp_image_path)

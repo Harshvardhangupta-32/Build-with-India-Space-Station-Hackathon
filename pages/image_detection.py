@@ -7,9 +7,9 @@ import time
 st.title("📷 Image Detection with YOLOv8")
 
 model_options = {
-    "YOLOv8n (Nano)": r"D:\\NEW LEARNING\\HackwithIndia - 6 Aug\\HackByte_Dataset\\runs\\detect\\Nano\\weights\\best.pt",
-    "YOLOv8s (Small)": r"D:\\NEW LEARNING\\HackwithIndia - 6 Aug\\HackByte_Dataset\\runs\\detect\\train2\\weights\\best.pt",
-    "YOLOv8m (Medium)": r"D:\\NEW LEARNING\\HackwithIndia - 6 Aug\\HackByte_Dataset\\runs\\detect\\train4\\weights\\best.pt"
+    "Nano (Eco Mode)": YOLO("models/Nano/weights/best.pt"),
+        "Small": YOLO("models/Small/weights/best.pt"),
+        "Medium": YOLO("models/Medium/weights/best.pt")
 }
 
 model_name = st.selectbox("Choose a YOLOv8 model:", list(model_options.keys()))

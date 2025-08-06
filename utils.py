@@ -5,7 +5,7 @@ import numpy as np
 
 # Load YOLOv8 model
 def load_yolo_model():
-    return YOLO("runs/detect/Nano/weights/best.pt")  # Update to your path
+    return YOLO("models/Nano/weights/best.pt")  # Update to your path
 
 # Load DeepSort Tracker
 def load_tracker():

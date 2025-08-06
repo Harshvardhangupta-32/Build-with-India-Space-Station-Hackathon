@@ -4,7 +4,7 @@ from get_pages import get_all_pages, get_page_config
 import time
 
 st.set_page_config(
-    page_title="🛰 HackByte Detection Dashboard", 
+    page_title="🛰 OrbitalVision:-Multi-Camera AI for Space Safety", 
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -296,7 +296,7 @@ with st.sidebar:
     st.markdown("""
         <div class="sidebar-header">
             <div class="sidebar-title">🎛️ Control Panel</div>
-            <div class="sidebar-subtitle">HackByte Detection Suite</div>
+            <div class="sidebar-subtitle">OrbitalVision Suite</div>
         </div>
     """, unsafe_allow_html=True)
     
@@ -371,7 +371,7 @@ with st.sidebar:
 # ---- Main Content ----
 st.markdown("""
     <div class="main-header">
-        <div class="main-title">🛰 HackByte Object Detection Suite</div>
+        <div class="main-title">🛰 OrbitalVision Suite</div>
         <div class="subtitle">
             Advanced real-time object detection powered by YOLOv8 with multiple detection modes, 
             optimized performance, and comprehensive tracking capabilities
@@ -487,13 +487,12 @@ Ready to explore the power of AI-driven object detection? Use the **Control Pane
 
 **Quick Navigation:**
 - **01 🏠 Home** - Main dashboard and overview
-- **02 🎛️ Control Panel** - System monitoring and configuration  
-- **03 📸 Image Detection** - Single image processing
-- **04 🎥 Video Detection** - Video file analysis
-- **05 🖼️ Multiple Images** - Batch processing
-- **06 📹 Webcam Detection** - Real-time detection
-- **07 🌱 Eco Mode** - Energy-efficient processing
-- **08 🎯 DeepSort** - Advanced object tracking
+- **02 📸 Image Detection** - Single image processing
+- **03 🎥 Video Detection** - Video file analysis
+- **04 🖼️ Multiple Images** - Batch processing
+- **05 📹 Webcam Detection** - Real-time detection
+- **06 🌱 Eco Mode** - Energy-efficient processing
+- **07 🎯 DeepSort** - Advanced object tracking
 """)
 
 # ---- Interactive Demo Button ----
@@ -508,10 +507,10 @@ with col2:
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #718096; font-size: 0.95em; margin-top: 2rem;'>
-    <p>Built with ❤️ for <strong>HackByte 2024</strong></p>
+    <p>Built with ❤️ for <strong>OrbitalVision 2025</strong></p>
     <p>Leveraging state-of-the-art YOLOv8 architecture for real-time object detection</p>
     <p style="font-size: 0.85em; margin-top: 1rem; opacity: 0.7;">
-        © 2024 HackByte Detection Suite | Open Source | MIT License
+        © 2024 OrbitalVision Suite | TEAM BITRATE
     </p>
 </div>
 """, unsafe_allow_html=True)
