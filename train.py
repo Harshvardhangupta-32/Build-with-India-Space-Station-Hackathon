@@ -11,7 +11,7 @@ LR0 = 0.001
 LRF = 0.01
 SINGLE_CLS = False
 IMG_SIZE = 640
-BATCH = 22
+BATCH = 10
 
 # Data augmentation parameters
 AUGMENTATION = {
@@ -46,7 +46,7 @@ if __name__ == '__main__':
     os.chdir(this_dir)
 
     # Load model
-    model = YOLO(os.path.join(this_dir, "yolov8n.pt"))
+    model = YOLO(os.path.join(this_dir, "yolov8l.pt"))
 
     # Train
     results = model.train(
