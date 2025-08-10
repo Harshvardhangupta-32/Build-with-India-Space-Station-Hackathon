@@ -369,7 +369,7 @@ with st.sidebar:
             </div>
             <div class="stat-item">
                 <span class="stat-label">🎯 Active Model:</span>
-                <span class="stat-value status-online">YOLOv8n</span>
+                <span class="stat-value status-online">YOLOv8</span>
             </div>
             <div class="stat-item">
                 <span class="stat-label">⏱️ Uptime:</span>
